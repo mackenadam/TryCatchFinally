@@ -9,7 +9,16 @@ namespace TryCatchFinally
             Console.WriteLine("Please enter a number:");
             string userInput = Console.ReadLine();
 
-            int userInputAsInteger = int.Parse(userInput);
+            try
+            {
+                int userInputAsInteger = int.Parse(userInput);
+                Console.WriteLine("You entered {0}", userInputAsInteger);
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Format exception, please enter a number.");
+            }
+
         }
     }
 }
