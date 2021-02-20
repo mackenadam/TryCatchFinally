@@ -14,9 +14,13 @@ namespace TryCatchFinally
                 int userInputAsInteger = int.Parse(userInput);
                 Console.WriteLine("You entered {0}", userInputAsInteger);
             }
-            catch (Exception)
+            catch (FormatException)
             {
                 Console.WriteLine("Format exception, please enter a number.");
+            }
+            catch (OverflowException)
+            {
+                Console.WriteLine("Overflow exception, your number is too large.");
             }
 
         }
