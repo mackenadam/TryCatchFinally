@@ -5,14 +5,11 @@ namespace TryCatchFinally
     class Program
     {
         static void Main(string[] args)
-        {
-            Console.WriteLine("Please enter a number:");
-            string userInput = Console.ReadLine();
-
+        {    
             try
             {
-                int userInputAsInteger = int.Parse(userInput);
-                Console.WriteLine("You entered {0}", userInputAsInteger);
+                int userInputAsInteger = int.Parse(GetUserInput());
+                Console.WriteLine("You have entered: {0}", userInputAsInteger);
             }
             catch (FormatException)
             {
@@ -30,7 +27,13 @@ namespace TryCatchFinally
             {
                 Console.WriteLine("This is called anyway.");
             }
+        }
 
+        public static string GetUserInput()
+        {
+            Console.WriteLine("Please enter a number:");
+            string consoleInput = Console.ReadLine();
+            return consoleInput;
         }
     }
 }
