@@ -26,6 +26,10 @@ namespace TryCatchFinally
             {
                 Console.WriteLine("Argument Null exception, make sure you have input a number.");
             }
+            finally
+            {
+                Console.WriteLine("This is called anyway.");
+            }
 
         }
     }
