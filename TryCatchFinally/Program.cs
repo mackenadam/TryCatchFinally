@@ -6,6 +6,23 @@ namespace TryCatchFinally
     {
         static void Main(string[] args)
         {    
+            // Challenge
+            try
+            {
+                int zero = 0;
+                int five = 5;
+                int impossibleNumber = five / zero;
+                Console.WriteLine("Congratulations, you clocked math. The impossible number is {0}", impossibleNumber);
+            }
+            catch(DivideByZeroException)
+            {
+                Console.WriteLine("Sorry, but that would break everything...");
+            }
+            finally
+            {
+                Console.WriteLine("Of course it didn't work.");
+            }
+
             try
             {
                 int userInputAsInteger = int.Parse(GetUserInput());
